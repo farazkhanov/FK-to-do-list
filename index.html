@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap" role="application" aria-label="Beautiful to-do app">
+        <header>
+            <div class="logo">FK</div>
+            <div>
+                <h1>Daily Tasks</h1>
+                <p class="lead">To-do list — built for focus by FK</p>
+            </div>
+            <div style="margin-left:auto" class="badge" id="clock">--:--</div>
+        </header>
+
+        <div class="input-row" aria-hidden="false">
+            <input id="newTask" type="text" placeholder="Add a new task... (press Enter)" aria-label="Add new task"
+                autocomplete="off" />
+            <button class="btn-add" id="addBtn" aria-label="Add task">+ Add</button>
+        </div>
+
+        <div class="controls">
+            <div class="filters" role="tablist" aria-label="Filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+                <button class="filter-btn" id="clearCompleted">Clear completed</button>
+                <button class="filter-btn" id="sortBtn">Sort: New</button>
+            </div>
+        </div>
+
+        <div class="list" id="list" aria-live="polite"></div>
+
+        <footer>
+            <div class="muted" id="leftCount">0 tasks left</div>
+            <div style="display:flex;gap:8px">
+                <div class="muted">Drag to reorder</div>
+            </div>
+        </footer>
+    </div>
+
+    <template id="itemTpl">
+        <div class="item" draggable="true">
+            <button class="checkbox" aria-label="Toggle complete" title="Toggle complete">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                </svg>
+            </button>
+            <div class="content">
+                <div contenteditable="true" class="title" spellcheck="false" aria-label="Task title">Task</div>
+                <div class="meta">Added just now</div>
+            </div>
+            <div class="actions">
+                <button class="icon-btn edit" title="Edit" aria-label="Edit">✏️</button>
+                <button class="icon-btn delete" title="Delete" aria-label="Delete">🗑️</button>
+            </div>
+        </div>
+    </template>
+    <script src="./script.js"></script>
+</body>
+
+</html>
