@@ -227,7 +227,7 @@ p.lead {
   outline: none;
 }
 .title.completed {
-  color: rgba(248, 246, 246, 0.55);
+  color: rgba(233, 230, 230, 0.55);
   text-decoration: line-through;
 }
 .meta {
@@ -287,9 +287,9 @@ footer {
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  color: #9aa4b2;
+  color: #939dac;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
-  border: 1px dashed rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(241, 239, 239, 0.02);
 }
 
 /* Scrollbar (WebKit) */
